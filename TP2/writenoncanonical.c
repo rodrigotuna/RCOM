@@ -47,7 +47,9 @@ int main(int argc, char** argv)
     
     if ( (argc < 2) || 
   	     ((strcmp("/dev/ttyS0", argv[1])!=0) && 
-  	      (strcmp("/dev/ttyS1", argv[1])!=0) )) {
+  	      (strcmp("/dev/ttyS1", argv[1])!=0) &&
+          (strcmp("/dev/ttyS11", argv[1])!=0) &&
+          (strcmp("/dev/ttyS10", argv[1])!=0) ) ) {
       printf("Usage:\tnserial SerialPort\n\tex: nserial /dev/ttyS1\n");
       exit(1);
     }
@@ -75,14 +77,14 @@ int main(int argc, char** argv)
     /* set input mode (non-canonical, no echo,...) */
     newtio.c_lflag = 0;
 
-    newtio.c_cc[VTIME]    = 0;   /* inter-character timer unused */
-    newtio.c_cc[VMIN]     = 1;   /* blocking read until 5 chars received */
+    newtio.c_cc[VTIME]    = 30;   /* inter-character timer unused */
+    newtio.c_cc[VMIN]     = 0;   /* blocking read until 5 chars received */
 
 
 
   /* 
     VTIME e VMIN devem ser alterados de forma a proteger com um temporizador a 
-    leitura do(s) próximo(s) caracter(es)
+    leitura do(s) prï¿½ximo(s) caracter(es)
   */
 
 
@@ -95,15 +97,6 @@ int main(int argc, char** argv)
     }
 
     printf("New termios structure set\n");
-   
-    //gets(buf);
-    
-    /* ----------------------------------- */
-    
-  
-    
-    
-    /* ----------------------------------- */
     
     
     buf[0] = MES_FLAG;
@@ -111,13 +104,13 @@ int main(int argc, char** argv)
     buf[2] = MES_C_SET;
     buf[3] = MES_A ^ MES_C_SET; 
     buf[4] = MES_FLAG;
-    
+
+    (void) signal(SIGALRM, atende);
+
     while (t < 3){
     
         res = write(fd,buf,5);   
         printf("%d bytes written\n", res);
-        
-        (void) signal(SIGALRM, atende);
         
         while(conta < 4 && i < 5){  
         
@@ -125,19 +118,17 @@ int main(int argc, char** argv)
               alarm(3);                 // activa alarme de 3s
               flag=0;
            }
-           
-           res = read(fd,&buf[i + 5],1);
-           if(res == 1) i++; 
+           if(read(fd,&buf[i + 5],1)) i++; 
         }
         
         if( comp( buf, buf + 5) ) break;
+        conta = 1;
+        i = 0;
         
         t++;
     }
-   
 
-    //printf("%s\n", buf);
-    
+    printf("String recebida %x %x %x %x %x\n", buf[5], buf[6], buf[7], buf[8], buf[9]);
 
     sleep(2);
 
