@@ -1,7 +1,11 @@
-#include "header/config.h"
+#include "../header/config.h"
 
 #include <fcntl.h>
 #include <termios.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <strings.h>
+#include <unistd.h>
 
 static struct termios oldtio,newtio;
 static int fd;

@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-#include "header/config.h"
-#include "header/app.h"
+#include "../header/config.h"
+#include "../header/app.h"
 
 int main(int argc, char ** argv){
     if ( (argc < 2) || 
