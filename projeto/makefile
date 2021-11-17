@@ -9,7 +9,7 @@ CFLAGS=-g -Wall
 TRANSMITTER_O_FILES=$(ODIR)/transmitter.o
 RECEIVER_O_FILES   =$(ODIR)/receiver.o
 
-O_FILES=$(ODIR)/ll.o $(ODIR)/app.o $(ODIR)/config.o $(ODIR)/com.o $(ODIR)/state_machine.o
+O_FILES=$(ODIR)/ll.o $(ODIR)/app.o $(ODIR)/config.o $(ODIR)/com.o $(ODIR)/state_machine.o $(ODIR)/utils.o
 
 all: transmitter receiver
 

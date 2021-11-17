@@ -2,9 +2,11 @@
 
 #include <unistd.h>
 #include <stdio.h>
+#include <string.h>
 
 #include "../header/flag.h"
 #include "../header/state_machine.h"
+#include "../header/utils.h"
 
 int send_SET(int fd,status_t status) {
     char msg_buf[5];
@@ -35,17 +37,43 @@ int send_UA(int fd,status_t status) {
     return res;
 }
 
-int receive_UA(int fd, char *a_rcv, char *c_rcv){
-    u_states_t state = START;
+int receive_U(int fd, char *a_rcv, char *c_rcv){
+    u_states_t state = U_START;
     char byte;
 
-    while(state != END){
-        read(fd, &byte, 1);
-        u_state_trans(&state, byte);
+    while(state != U_END){
+        if (read(fd, &byte, 1) != 1) {
+            perror("read");
+            return -1;
+        }
+        if (u_state_trans(&state, byte, a_rcv, c_rcv) < 0) return -1;
     }
 
-    *a_rcv = a_received;
-    *c_rcv = c_received;
-
     return 0;
+}
+
+int receive_I(int fd, char* buffer) {
+    i_states_t state = I_START;
+    char byte;
+    char buf[1000];
+    int sz = 0;
+
+    while(state != I_END){
+        if (read(fd, &byte, 1) != 1) {
+            perror("read");
+            return -1;
+        }
+        if (i_state_trans(&state, byte, &sz, buf) < 0) return -1;
+    }
+
+    char buf_destuff [1000];
+    int destuff_sz = destuff_frame();
+
+    if(buf_destuff[destuff_sz - 1] != bcc_buf(buf_destuff, destuff_sz-1)){
+        return -1;
+    }
+
+    memcpy(buffer, buf_destuff, destuff_sz-1);
+
+    return sz-1;
 }
