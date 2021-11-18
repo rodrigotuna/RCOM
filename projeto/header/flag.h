@@ -7,10 +7,12 @@
 #define MSG_C_SET        0x03                        
 #define MSG_C_DISC       0x0B                        
 #define MSG_C_UA         0x07
+#define MSG_C_I(N)       ((N) << 6)
+#define MSG_C_RR(N)      (0x05  | ((N) << 7)) 
+#define MSG_C_REJ(N)     (0x01 | ((N) << 7))
+#define MSG_ESC          0x7D
+#define MSG_STUFF(N)     ((N) ^  0x20)
 
-#define MSG_C_I(N)         ((N) << 6)
-#define MSG_C_RR(N)        (0x05  | ((N) << 7)) 
-#define MSG_C_REJ(N)       (0x01 | ((N) << 7))
 
 #define NUM_RETRANSMISSIONS 3
 
