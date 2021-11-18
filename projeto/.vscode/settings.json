@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "termios.h": "c",
-        "flag.h": "c"
+        "flag.h": "c",
+        "utils.h": "c"
     }
 }
