@@ -8,24 +8,13 @@
 #include "../header/state_machine.h"
 #include "../header/utils.h"
 
-int send_SET(int fd,status_t status) {
-    char msg_buf[5];
-    msg_buf[0] = MSG_FLAG;
-    msg_buf[1] = (status == RECEIVER ? MSG_A_RECV : MSG_A_SEND);
-    msg_buf[2] = MSG_C_SET;
-    msg_buf[3] = msg_buf[1] ^ msg_buf[2];
-    msg_buf[4] = MSG_FLAG;
-
-    return write(fd, msg_buf, 5);
-}
-
-int send_UA(int fd,status_t status) {
+int send_command(int fd, status_t status, char ctrl){
     int res;
 
     char msg_buf[5];
     msg_buf[0] = MSG_FLAG;
     msg_buf[1] = (status == RECEIVER ? MSG_A_RECV : MSG_A_SEND);
-    msg_buf[2] = MSG_C_UA;
+    msg_buf[2] = ctrl;
     msg_buf[3] = msg_buf[1] ^ msg_buf[2];
     msg_buf[4] = MSG_FLAG;
 
@@ -35,6 +24,29 @@ int send_UA(int fd,status_t status) {
         return -1;
     }
     return res;
+}
+
+int send_response(int fd, status_t status, char ctrl){
+    int res;
+
+    char msg_buf[5];
+    msg_buf[0] = MSG_FLAG;
+    msg_buf[1] = (status == RECEIVER ? MSG_A_SEND : MSG_A_RECV);
+    msg_buf[2] = ctrl;
+    msg_buf[3] = msg_buf[1] ^ msg_buf[2];
+    msg_buf[4] = MSG_FLAG;
+
+    res = write(fd, msg_buf, 5);
+    if(res < 0){
+        perror("write");
+        return -1;
+    }
+    return res;
+}
+
+
+int send_I_FRAME(int fd, char * buf, int size){
+
 }
 
 int receive_U(int fd, char *a_rcv, char *c_rcv){
@@ -47,6 +59,21 @@ int receive_U(int fd, char *a_rcv, char *c_rcv){
             return -1;
         }
         if (u_state_trans(&state, byte, a_rcv, c_rcv) < 0) return -1;
+    }
+
+    return 0;
+}
+
+int receive_S(int fd, char* a_rcv, char* c_rcv) {
+    s_states_t state = S_START;
+    char byte;
+
+    while(state != S_END){
+        if (read(fd, &byte, 1) != 1) {
+            perror("read");
+            return -1;
+        }
+        if (s_state_trans(&state, byte, a_rcv, c_rcv) < 0) return -1;
     }
 
     return 0;

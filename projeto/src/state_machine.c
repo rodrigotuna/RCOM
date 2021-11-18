@@ -9,16 +9,16 @@ int u_state_trans(u_states_t *state, char byte, char * a_rcv, char * c_rcv){
                   if(byte == MSG_FLAG) *state = U_FLAG_RCV;
                   break;
               case U_FLAG_RCV:
-                  if(byte == MSG_A_RECV) {
+                  if(byte == MSG_A_RECV || byte == MSG_A_SEND) {
                       *state = U_A_RCV;
-                      *a_rcv = MSG_A_RECV;
+                      *a_rcv = byte;
                   } else if (byte == MSG_FLAG) *state = U_FLAG_RCV;
                   else state = U_START;
                   break;
               case U_A_RCV:
-                  if(byte == MSG_C_SET) {
+                  if(byte == MSG_C_UA) {
                       *state = U_C_RCV;
-                      *c_rcv = MSG_C_SET;
+                      *c_rcv = byte;
                   } else if (byte == MSG_FLAG) *state = U_FLAG_RCV;
                   else state = U_START;
                   break;
@@ -65,6 +65,40 @@ int i_state_trans(i_states_t *state, char byte, int *sz, char* buf){
                   }
                   break;
              case I_END:
+                  return -1;
+          }
+          return 0;
+}
+
+int s_state_trans(s_states_t *state, char byte, char * a_rcv, char * c_rcv){
+    switch(*state){
+              case S_START:
+                  if(byte == MSG_FLAG) *state = S_FLAG_RCV;
+                  break;
+              case S_FLAG_RCV:
+                  if(byte == MSG_A_RECV || byte == MSG_A_SEND) {
+                      *state = S_A_RCV;
+                      *a_rcv = byte;
+                  } else if (byte == MSG_FLAG) *state = S_FLAG_RCV;
+                  else state = S_START;
+                  break;
+              case S_A_RCV:
+                  if(byte == MSG_C_SET || byte == MSG_C_DISC || byte == MSG_C_REJ(Nr) || byte == MSG_C_RR(Nr)) {
+                      *state = S_C_RCV;
+                      *c_rcv = byte;
+                  } else if (byte == MSG_FLAG) *state = S_FLAG_RCV;
+                  else state = S_START;
+                  break;
+              case S_C_RCV:
+                  if(byte == (*a_rcv ^ *c_rcv)) *state = S_BCC_OK;
+                  else if (byte == MSG_FLAG) *state = S_FLAG_RCV;
+                  else *state = S_START;
+                  break;
+              case S_BCC_OK:
+                  if(byte == MSG_FLAG) *state = S_END;
+                  else *state = S_START;
+                  break;
+             case S_END:
                   return -1;
           }
           return 0;

@@ -23,5 +23,16 @@ typedef enum {
 
 int i_state_trans(i_states_t *state, char byte,int *sz, char* buf);
 
+typedef enum { 
+    S_START, 
+    S_FLAG_RCV, 
+    S_A_RCV, 
+    S_C_RCV, 
+    S_BCC_OK, 
+    S_END
+} s_states_t;
+
+int s_state_trans(s_states_t *state, char byte, char * a_rcv, char * c_rcv);
+
 #endif // _STATE_MACHINE_H
 
