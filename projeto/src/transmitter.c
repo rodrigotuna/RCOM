@@ -17,7 +17,7 @@ int main(int argc, char ** argv){
 
     set_config(argv[1]);
 
-    if(app_send_file(fd, argv[2]) != 0){
+    if(application(fd, TRANSMITTER, argv[2]) != 0){
         fprintf(stderr, "Error transmitting File");
         exit(-1);
     }

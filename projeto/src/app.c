@@ -1,5 +1,10 @@
 #include "../header/app.h"
 
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <libgen.h>
+
 int application (int fd, status_t status, char* path) {
 
     if(ll_open(fd, status) < 0) return -1;
@@ -7,14 +12,14 @@ int application (int fd, status_t status, char* path) {
     app_info.fileDescriptor = fd;
     app_info.status = status;
 
-    if(status = TRANSMITTER){
+    if(status == TRANSMITTER){
         if(app_send_file(fd,path) < 0){
             fprintf(stderr, "Error: Couldn't send file to Receiver.\n");
             return -1;
         }
     }
     else {
-        if(app_recieve_file(fd) < 0){
+        if(app_receive_file(fd) < 0){
             fprintf(stderr, "Error: Couldn't receive file from Transmitter.\n");
             return -1;
         }
@@ -88,7 +93,7 @@ int app_send_file(int fd, char* path){
     FILE* file;
     unsigned int size = 0, sequence_number = 0;
 
-    if(file = fopen(path, "rb") == NULL){
+    if((file = fopen(path, "rb")) == NULL){
         fprintf(stderr, "Error: Couldn't open file.\n");
         return -1;
     }
@@ -109,16 +114,16 @@ int app_send_file(int fd, char* path){
         sequence_number++;
     }
 
-    if(app_send_ctrl_packet(END_CTRL, file_size, filename) < 0) return -1;
+    if(app_send_control_packet(END_CTRL, file_size, filename) < 0) return -1;
 
     return 0;
 }
 
 int app_receive_data_packet(char * data, int sequence_number){
 
-    uint8_t * data_packet = (uint8_t*) malloc(DATA_PACKET_MAX_SIZE + 4);
+    char * data_packet = (char*) malloc(DATA_PACKET_MAX_SIZE + 4);
 
-    if(llread(app_info.fileDescriptor, data_packet) < 0){
+    if(ll_read(app_info.fileDescriptor, data_packet) < 0){
         fprintf(stderr, "Error: Couldn't read data.\n");
         free(data_packet);
         return -1;
@@ -153,9 +158,9 @@ int app_receive_data_packet(char * data, int sequence_number){
 
 int app_receive_control_packet(int ctrl_flag, unsigned int * file_size, char* filename){
 
-    uint8_t * ctrl_packet[NUM_FIELDS_CTRL + 255 + sizeof(unsigned int)];
+    char ctrl_packet[NUM_FIELDS_CTRL + 255 + sizeof(unsigned int)];
 
-    if(llread(app_info.fileDescriptor, ctrl_packet) < 0){
+    if(ll_read(app_info.fileDescriptor, ctrl_packet) < 0){
         fprintf(stderr, "Error: Couldn't read control packet.\n");
         return -1;
     }
@@ -165,7 +170,7 @@ int app_receive_control_packet(int ctrl_flag, unsigned int * file_size, char* fi
         return -1;
     } 
 
-    if(ctrl_packet[T1_SIZE] = FILE_SIZE_FLAG){
+    if(ctrl_packet[T1_SIZE] == FILE_SIZE_FLAG){
         fprintf(stderr, "Error: Type of parameter doesn't match.\n");
         return -1;
     }
@@ -203,9 +208,9 @@ int app_receive_file(){
     int K = 0;
     unsigned int sequence_number = 0, bytes_read = 0;
 
-    if(app_rcv_ctrl_packet(START_CTRL, &file_size_start, filename_start) < 0) return -1;
+    if(app_receive_control_packet(START_CTRL, &file_size_start, filename_start) < 0) return -1;
 
-    if(file = fopen(filename_start, "wb") == NULL){
+    if((file = fopen(filename_start, "wb")) == NULL){
         fprintf(stderr, "Error: Couldn't open file.\n");
         return -1;
     }
@@ -229,7 +234,7 @@ int app_receive_file(){
 
     free(data_buffer);
 
-    if(app_rcv_ctrl_packet(END_CTRL, &file_size_end, filename_end) < 0) return -1;
+    if(app_receive_control_packet(END_CTRL, &file_size_end, filename_end) < 0) return -1;
 
     if(file_size_start != file_size_end || strcmp(filename_start, filename_end) != 0){
         fprintf(stderr, "Error: Start and End Control packets don't match.");

@@ -17,7 +17,7 @@ int main(int argc, char ** argv){
 
     set_config(argv[1]);
 
-     if(app_recieve_file(fd, argv[2]) != 0){
+     if(application(fd, RECEIVER, argv[2]) != 0){
         fprintf(stderr, "Error recieving File");
         exit(-1);
     }
