@@ -7,11 +7,11 @@
 #include <strings.h>
 #include <unistd.h>
 
-static struct termios oldtio,newtio;
-static int fd;
+struct termios oldtio,newtio;
 
-void set_config(char * serial_port){
+int set_config(char * serial_port){
     int fd = open(serial_port, O_RDWR | O_NOCTTY );
+
     if (fd <0) {perror(serial_port); exit(-1); }
 
     if ( tcgetattr(fd,&oldtio) == -1) { /* save current port settings */
@@ -33,9 +33,10 @@ void set_config(char * serial_port){
     VTIME e VMIN devem ser alterados de forma a proteger com um temporizador a 
     leitura do(s) pr�ximo(s) caracter(es)
   */
+    return fd;
 }
 
-void reset_config() {
+void reset_config(int fd) {
     sleep(2);  
 
     if (tcsetattr(fd, TCSANOW, &oldtio) == -1) {

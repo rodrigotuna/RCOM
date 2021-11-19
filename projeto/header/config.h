@@ -3,9 +3,8 @@
 
 #define BAUDRATE B38400
 
-static int fd;
-void set_config(char * serial_port);
-void reset_config();
+int set_config(char * serial_port);
+void reset_config(int fd);
 
 
 #endif // _CONFIG_H

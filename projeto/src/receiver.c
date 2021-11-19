@@ -15,12 +15,12 @@ int main(int argc, char ** argv){
       exit(1);
     }
 
-    set_config(argv[1]);
+    int fd = set_config(argv[1]);
 
      if(application(fd, RECEIVER, argv[2]) != 0){
         fprintf(stderr, "Error recieving File");
         exit(-1);
     }
     
-    reset_config();
+    reset_config(fd);
 }
