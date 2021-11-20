@@ -14,7 +14,7 @@ int ll_open(int fd, status_t st){
                 return -1;
             }
 
-            char a_rcv, c_rcv;
+            uint8_t a_rcv, c_rcv;
             receive_U(fd, &a_rcv, &c_rcv); 
 
             if(a_rcv == MSG_A_SEND && c_rcv == MSG_C_UA){
@@ -26,7 +26,7 @@ int ll_open(int fd, status_t st){
     } else if (status == RECEIVER){
         int tries;
         for(tries = 0; tries < 3; tries++){
-            char a_rcv, c_rcv;
+            uint8_t a_rcv, c_rcv;
             receive_S(fd, &a_rcv, &c_rcv);
 
             if(a_rcv == MSG_A_SEND && c_rcv == MSG_C_SET){
@@ -42,7 +42,7 @@ int ll_open(int fd, status_t st){
     return 0;
 }
 
-int ll_read(int fd, char * buffer) {
+int ll_read(int fd, uint8_t * buffer) {
     Ns = (Ns + 1)%2;
     Nr = (Nr + 1)%2;
 
@@ -60,7 +60,7 @@ int ll_read(int fd, char * buffer) {
     if(tries == 3) return -1;
     return res;
 }
-int ll_write(int fd, char * buffer, int length){
+int ll_write(int fd, uint8_t * buffer, int length){
     Ns = (Ns + 1)%2;
     Nr = (Nr + 1)%2;
  
@@ -72,7 +72,7 @@ int ll_write(int fd, char * buffer, int length){
             continue;
         }
 
-        char a_rcv, c_rcv;
+        uint8_t a_rcv, c_rcv;
         res = receive_S(fd, &a_rcv, &c_rcv);
 
         if(res < 0) continue;
@@ -93,7 +93,7 @@ int ll_close(int fd){
                 return -1;
             }
 
-            char a_rcv, c_rcv;
+            uint8_t a_rcv, c_rcv;
             res = receive_S(fd, &a_rcv, &c_rcv); 
             if(res < 0) continue;
             else if(a_rcv == MSG_A_RECV && c_rcv == MSG_C_DISC){
@@ -104,11 +104,11 @@ int ll_close(int fd){
 
         res = send_response(fd, status, MSG_C_UA);
     } else if (status == RECEIVER){
-        char a_rcv, c_rcv;
+        uint8_t a_rcv, c_rcv;
         res = receive_S(fd, &a_rcv, &c_rcv);
 
         if(res < 0) return -1;
-        if(a_rcv == MSG_A_RECV && c_rcv == MSG_C_DISC){
+        if(a_rcv == MSG_A_SEND && c_rcv == MSG_C_DISC){
         
         } else {
             return -1;
@@ -122,7 +122,7 @@ int ll_close(int fd){
 
         if(res < 0) return -1;
 
-        if(a_rcv == MSG_A_SEND && c_rcv == MSG_C_UA){
+        if(a_rcv == MSG_A_RECV && c_rcv == MSG_C_UA){
             
         } else {
             return -1;

@@ -1,9 +1,10 @@
 #include "../header/utils.h"
 
+
 #include "../header/flag.h"
 
 
-int destuff_frame(char * destuff_buf, char * buf, int sz){
+int destuff_frame(uint8_t * destuff_buf, uint8_t * buf, int sz){
     int destuff_sz = 0;
     for(int i = 0; i < sz; i++){
         if(buf[i] == MSG_ESC){
@@ -14,7 +15,7 @@ int destuff_frame(char * destuff_buf, char * buf, int sz){
 
 }
 
-int stuff_frame(char * stuff_buf, char * buf, int sz){
+int stuff_frame(uint8_t * stuff_buf, uint8_t * buf, int sz){
     int stuff_sz = 0;
     for(int i = 0; i < sz; i++){
         if(buf[i] == MSG_FLAG || buf[i] == MSG_ESC){
@@ -25,8 +26,8 @@ int stuff_frame(char * stuff_buf, char * buf, int sz){
     return stuff_sz;
 }
 
-char bcc_buf(char * buf, int sz){
-    char res = 0;
+uint8_t bcc_buf(uint8_t * buf, int sz){
+    uint8_t res = 0;
     for(int i = 0; i < sz; i++){
         res ^= buf[i];
     }

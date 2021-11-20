@@ -47,7 +47,7 @@ int app_send_data_packet(char* data, uint32_t data_size, unsigned int sequence_n
 
     memcpy(data_packet + P_DATA, data, data_size);
 
-    if(write(app_info.fileDescriptor, data_packet, data_size + NUM_FIELDS_DATA) < 0){
+    if(ll_write(app_info.fileDescriptor, data_packet, data_size + NUM_FIELDS_DATA) < 0){
         fprintf(stderr, "Error: Couldn't write control packet.\n");
         free(data_packet);
         return -1;
@@ -77,7 +77,7 @@ int app_send_control_packet(int ctrl_flag, uint32_t file_size, const char* filen
 
     memcpy(ctrl_packet + V2_NAME, filename, strlen(filename));
 
-    if(write(app_info.fileDescriptor, ctrl_packet, ctrl_packet_size) < 0){
+    if(ll_write(app_info.fileDescriptor, ctrl_packet, ctrl_packet_size) < 0){
         fprintf(stderr, "Error: Couldn't write control packet.\n");
         free(ctrl_packet);
         return -1;
@@ -100,6 +100,7 @@ int app_send_file(int fd, char* path){
 
     fseek(file, 0, SEEK_END);
     uint32_t file_size = ftell(file);
+    fseek(file, 0, SEEK_SET);
 
     char *filename = basename(path) + '\0';
 
@@ -121,7 +122,7 @@ int app_send_file(int fd, char* path){
 
 int app_receive_data_packet(char * data, int sequence_number){
 
-    char * data_packet = (char*) malloc(DATA_PACKET_MAX_SIZE + 4);
+    uint8_t * data_packet = (uint8_t*) malloc(DATA_PACKET_MAX_SIZE + 4);
 
     if(ll_read(app_info.fileDescriptor, data_packet) < 0){
         fprintf(stderr, "Error: Couldn't read data.\n");
@@ -158,7 +159,7 @@ int app_receive_data_packet(char * data, int sequence_number){
 
 int app_receive_control_packet(int ctrl_flag, unsigned int * file_size, char* filename){
 
-    char ctrl_packet[NUM_FIELDS_CTRL + 255 + sizeof(unsigned int)];
+    uint8_t ctrl_packet[NUM_FIELDS_CTRL + 255 + sizeof(unsigned int)];
 
     if(ll_read(app_info.fileDescriptor, ctrl_packet) < 0){
         fprintf(stderr, "Error: Couldn't read control packet.\n");
@@ -170,7 +171,7 @@ int app_receive_control_packet(int ctrl_flag, unsigned int * file_size, char* fi
         return -1;
     } 
 
-    if(ctrl_packet[T1_SIZE] == FILE_SIZE_FLAG){
+    if(ctrl_packet[T1_SIZE] != FILE_SIZE_FLAG){
         fprintf(stderr, "Error: Type of parameter doesn't match.\n");
         return -1;
     }

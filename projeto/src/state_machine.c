@@ -1,9 +1,11 @@
 #include "../header/state_machine.h"
 
+#include <stdint.h>
+
 #include "../header/flag.h"
 #include "../header/com.h"
 
-int u_state_trans(u_states_t *state, char byte, char * a_rcv, char * c_rcv){
+int u_state_trans(u_states_t *state, uint8_t byte, uint8_t * a_rcv, uint8_t * c_rcv){
     switch(*state){
               case U_START:
                   if(byte == MSG_FLAG) *state = U_FLAG_RCV;
@@ -37,7 +39,7 @@ int u_state_trans(u_states_t *state, char byte, char * a_rcv, char * c_rcv){
           return 0;
 }     
 
-int i_state_trans(i_states_t *state, char byte, int *sz, char* buf){
+int i_state_trans(i_states_t *state, uint8_t byte, int *sz, uint8_t * buf){
 
     switch(*state){
               case I_START:
@@ -70,7 +72,7 @@ int i_state_trans(i_states_t *state, char byte, int *sz, char* buf){
           return 0;
 }
 
-int s_state_trans(s_states_t *state, char byte, char * a_rcv, char * c_rcv){
+int s_state_trans(s_states_t *state, uint8_t byte, uint8_t * a_rcv, uint8_t * c_rcv){
     switch(*state){
               case S_START:
                   if(byte == MSG_FLAG) *state = S_FLAG_RCV;

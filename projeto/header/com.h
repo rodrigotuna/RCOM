@@ -7,11 +7,11 @@ int Ns;
 int Nr;
 
 
-int send_command(int fd, status_t status, char ctrl);
-int send_response(int fd, status_t status, char ctrl);
-int send_I_FRAME(int fd, char * buf, int size);
-int receive_U(int fd, char* a_rcv, char* c_rcv);
-int receive_S(int fd, char* a_rcv, char* c_rcv);
-int receive_I(int fd, char* buffer);
+int send_command(int fd, status_t status, uint8_t ctrl);
+int send_response(int fd, status_t status, uint8_t ctrl);
+int send_I_FRAME(int fd, uint8_t * buf, int size);
+int receive_U(int fd, uint8_t* a_rcv, uint8_t* c_rcv);
+int receive_S(int fd, uint8_t* a_rcv, uint8_t* c_rcv);
+int receive_I(int fd, uint8_t* buffer);
 
 #endif // _COM_H

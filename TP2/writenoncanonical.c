@@ -20,14 +20,6 @@
 #define MES_C_SET 0x03
 
 int flag=1, conta=1;
-
-void atende()                   // atende alarme
-{
-	printf("alarme # %d\n", conta);
-	flag=1;
-	conta++;
-}
-
 int comp (char * a, char * b){
     for(int i = 0; i < 5; i++){
         if( a[i] != b[i]) return 0;
@@ -105,20 +97,14 @@ int main(int argc, char** argv)
     buf[3] = MES_A ^ MES_C_SET; 
     buf[4] = MES_FLAG;
 
-    (void) signal(SIGALRM, atende);
-
     while (t < 3){
-    
+        printf("Trie #%d\n", t);
         res = write(fd,buf,5);   
         printf("%d bytes written\n", res);
         
-        while(conta < 4 && i < 5){  
-        
-           if(flag){
-              alarm(3);                 // activa alarme de 3s
-              flag=0;
-           }
-           if(read(fd,&buf[i + 5],1)) i++; 
+        while(i < 5){  
+           if(read(fd,&buf[i + 5],1)) i++;
+           else break; 
         }
         
         if( comp( buf, buf + 5) ) break;
