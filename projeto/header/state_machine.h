@@ -20,7 +20,9 @@ typedef enum {
     I_A_RCV, 
     I_C_RCV, 
     I_DATA, 
-    I_END
+    I_END,
+    I_REP,
+    I_REP_END
 } i_states_t;
 
 int i_state_trans(i_states_t *state, uint8_t byte,int *sz, uint8_t* buf);

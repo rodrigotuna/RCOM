@@ -120,13 +120,19 @@ int receive_I(int fd, uint8_t* buffer) {
     uint8_t byte;
     uint8_t buf[2*MAX_SIZE];
     int sz = 0;
-
-    while(state != I_END){
-        if (read(fd, &byte, 1) != 1) {
-            fprintf(stderr, "Error: Exceeded read time.\n");
-            return -1;
+    while (state != I_END){
+        while(state != I_END && state != I_REP_END){
+            if (read(fd, &byte, 1) != 1) {
+                fprintf(stderr, "Error: Exceeded read time.\n");
+                return -1;
+            }
+            if (i_state_trans(&state, byte, &sz, buf) < 0) return -1;
         }
-        if (i_state_trans(&state, byte, &sz, buf) < 0) return -1;
+        if(state == I_REP_END){
+            send_response(fd, RECEIVER, MSG_C_RR((Nr + 1)%2));
+            fprintf(stderr, "Error: Received repeated Information Frame, sending RR.\n");
+            state = I_START;
+        }
     }
 
     uint8_t buf_destuff [MAX_SIZE];

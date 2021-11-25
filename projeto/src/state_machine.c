@@ -52,6 +52,7 @@ int i_state_trans(i_states_t *state, uint8_t byte, int *sz, uint8_t * buf){
                   break;
               case I_A_RCV:
                   if(byte == MSG_C_I(Ns))  *state = I_C_RCV;
+                  else if (byte == MSG_C_I((Ns + 1)%2)) *state = I_REP;
                   else if (byte == MSG_FLAG) *state = I_FLAG_RCV;
                   else state = I_START;
                   break;
@@ -66,7 +67,11 @@ int i_state_trans(i_states_t *state, uint8_t byte, int *sz, uint8_t * buf){
                       buf[(*sz)++] = byte;
                   }
                   break;
-             case I_END:
+              case I_REP:
+                  if(byte == MSG_FLAG) *state = I_REP_END;
+              case I_END:
+                  return -1;
+              case I_REP_END:
                   return -1;
           }
           return 0;
