@@ -21,7 +21,7 @@ int send_command(int fd, status_t status, uint8_t ctrl){
 
     res = write(fd, msg_buf, 5);
     if(res < 0){
-        perror("write");
+        fprintf(stderr, "Error: Write.\n");
         return -1;
     }
     return res;
@@ -39,7 +39,7 @@ int send_response(int fd, status_t status, uint8_t ctrl){
 
     res = write(fd, msg_buf, 5);
     if(res < 0){
-        perror("write");
+        fprintf(stderr, "Error: Write.\n");
         return -1;
     }
     return res;
@@ -57,7 +57,7 @@ int send_I_FRAME(int fd, uint8_t * buf, int size){
 
     res = write(fd, header, 4);
     if(res < 0){
-        perror("write");
+        fprintf(stderr, "Error: Write.\n");
         return -1;
     }
 
@@ -69,7 +69,7 @@ int send_I_FRAME(int fd, uint8_t * buf, int size){
 
     res = write(fd, stuff_buf, stuff_sz);
     if(res < 0){
-        perror("write");
+        fprintf(stderr, "Error: Write.\n");
         return -1;
     }
 
@@ -78,7 +78,7 @@ int send_I_FRAME(int fd, uint8_t * buf, int size){
 
     res = write(fd, tail, 1);
     if(res < 0){
-        perror("write");
+        fprintf(stderr, "Error: Write.\n");
         return -1;
     }
 
@@ -91,7 +91,7 @@ int receive_U(int fd, uint8_t *a_rcv, uint8_t *c_rcv){
 
     while(state != U_END){
         if (read(fd, &byte, 1) != 1) {
-            perror("read");
+            fprintf(stderr, "Error: Exceeded read time.\n");
             return -1;
         }
         if (u_state_trans(&state, byte, a_rcv, c_rcv) < 0) return -1;
@@ -106,7 +106,7 @@ int receive_S(int fd, uint8_t* a_rcv, uint8_t* c_rcv) {
 
     while(state != S_END){
         if (read(fd, &byte, 1) != 1) {
-            perror("read");
+            fprintf(stderr, "Error: Exceeded read time.\n");
             return -1;
         }
         if (s_state_trans(&state, byte, a_rcv, c_rcv) < 0) return -1;
@@ -123,7 +123,7 @@ int receive_I(int fd, uint8_t* buffer) {
 
     while(state != I_END){
         if (read(fd, &byte, 1) != 1) {
-            perror("read");
+            fprintf(stderr, "Error: Exceeded read time.\n");
             return -1;
         }
         if (i_state_trans(&state, byte, &sz, buf) < 0) return -1;
@@ -133,6 +133,7 @@ int receive_I(int fd, uint8_t* buffer) {
     int destuff_sz = destuff_frame(buf_destuff, buf, sz);
 
     if(buf_destuff[destuff_sz - 1] != bcc_buf(buf_destuff, destuff_sz-1)){
+        fprintf(stderr, "Error: Wrong BCC2.\n");
         return -1;
     }
 

@@ -14,6 +14,6 @@
 #define MSG_STUFF(N)     ((N) ^  0x20)
 
 
-#define NUM_RETRANSMISSIONS 3
+#define NUM_RETRANS 3
 
 #endif // _FLAG_H

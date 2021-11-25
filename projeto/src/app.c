@@ -26,7 +26,7 @@ int application (int fd, status_t status, char* path) {
     }
 
     if(ll_close(fd) < 0) return -1;
-
+    fprintf(stdout, "File transmitted successfully.\n");
     return 0;
 }
 
@@ -136,7 +136,7 @@ int app_receive_data_packet(char * data, int sequence_number){
         return -1;
     }
 
-    if(data_packet[N_DATA] != sequence_number){
+    if(data_packet[N_DATA] != (sequence_number % 255)){
         fprintf(stderr, "Error: Sequence Number doesn't match.");
         free(data_packet);
         return -1;
