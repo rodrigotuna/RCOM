@@ -33,12 +33,7 @@
 #define L1_DATA 3
 #define P_DATA 4
 
-typedef struct {
-    int fileDescriptor; // Descriptor corresponding to the serial port
-    status_t status; // TRANSMITTER | RECEIVER
-} app_layer_t;
-
-app_layer_t app_info;
+int fileDescriptor; // Descriptor corresponding to the serial port
 
 int application (int fd, status_t status, char* path);
 

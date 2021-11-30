@@ -9,8 +9,7 @@ int application (int fd, status_t status, char* path) {
 
     if(ll_open(fd, status) < 0) return -1;
 
-    app_info.fileDescriptor = fd;
-    app_info.status = status;
+    fileDescriptor = fd;
 
     if(status == TRANSMITTER){
         if(app_send_file(fd,path) < 0){
@@ -47,7 +46,7 @@ int app_send_data_packet(char* data, uint32_t data_size, unsigned int sequence_n
 
     memcpy(data_packet + P_DATA, data, data_size);
 
-    if(ll_write(app_info.fileDescriptor, data_packet, data_size + NUM_FIELDS_DATA) < 0){
+    if(ll_write(fileDescriptor, data_packet, data_size + NUM_FIELDS_DATA) < 0){
         fprintf(stderr, "Error: Couldn't write data packet.\n");
         free(data_packet);
         return -1;
@@ -77,7 +76,7 @@ int app_send_control_packet(int ctrl_flag, uint32_t file_size, const char* filen
 
     memcpy(ctrl_packet + V2_NAME, filename, strlen(filename));
 
-    if(ll_write(app_info.fileDescriptor, ctrl_packet, ctrl_packet_size) < 0){
+    if(ll_write(fileDescriptor, ctrl_packet, ctrl_packet_size) < 0){
         fprintf(stderr, "Error: Couldn't write control packet.\n");
         free(ctrl_packet);
         return -1;
@@ -124,7 +123,7 @@ int app_receive_data_packet(char * data, int sequence_number){
 
     uint8_t * data_packet = (uint8_t*) malloc(DATA_PACKET_MAX_SIZE + NUM_FIELDS_DATA);
 
-    if(ll_read(app_info.fileDescriptor, data_packet) < 0){
+    if(ll_read(fileDescriptor, data_packet) < 0){
         fprintf(stderr, "Error: Couldn't read data.\n");
         free(data_packet);
         return -1;
@@ -161,7 +160,7 @@ int app_receive_control_packet(int ctrl_flag, unsigned int * file_size, char* fi
 
     uint8_t ctrl_packet[NUM_FIELDS_CTRL + 255 + sizeof(unsigned int)];
 
-    if(ll_read(app_info.fileDescriptor, ctrl_packet) < 0){
+    if(ll_read(fileDescriptor, ctrl_packet) < 0){
         fprintf(stderr, "Error: Couldn't read control packet.\n");
         return -1;
     }
