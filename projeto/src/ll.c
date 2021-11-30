@@ -14,7 +14,7 @@ int ll_open(int fd, status_t st){
         for(tries = 0; tries < NUM_RETRANS; tries++){
             if (send_command(fd,status, MSG_C_SET) < 0){
                 fprintf(stderr, "Error: Sending SET.\n");
-                return -1;
+                continue;
             }
 
             uint8_t a_rcv, c_rcv;
