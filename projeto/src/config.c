@@ -43,8 +43,7 @@ int set_config(char * serial_port){
     return fd;
 }
 
-void reset_config(int fd) {
-    sleep(2);  
+void reset_config(int fd) {  
 
     if (tcsetattr(fd, TCSANOW, &oldtio) == -1) {
         perror("tcsetattr reset");

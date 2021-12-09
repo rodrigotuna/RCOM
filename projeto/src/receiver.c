@@ -16,11 +16,11 @@ int main(int argc, char ** argv){
       exit(1);
     }
 
-    set_t_prop(atoi(argv[3]));
+    set_t_prop(atoi(argv[2])*1000);
 
     int fd = set_config(argv[1]);
 
-     if(application(fd, RECEIVER, argv[2]) != 0){
+     if(application(fd, RECEIVER, argv[3]) != 0){
         fprintf(stderr, "Error recieving File");
         exit(-1);
     }

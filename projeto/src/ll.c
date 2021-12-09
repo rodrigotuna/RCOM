@@ -107,6 +107,7 @@ int ll_write(int fd, uint8_t * buffer, int length){
             if(c_rcv == MSG_C_RR(Nr)) break;
             else if(c_rcv == MSG_C_REJ(Nr)) {
                 fprintf(stderr, "Error: Received REJ, retrying.\n");
+                tries--;
                 continue;
             }
         }

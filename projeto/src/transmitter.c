@@ -20,7 +20,7 @@ int main(int argc, char ** argv){
     }
 
     set_error(atoi(argv[3]));
-    set_t_prop(atoi(argv[4]));
+    set_t_prop(atoi(argv[4])*1000);
 
     int fd = set_config(argv[1]);
 
