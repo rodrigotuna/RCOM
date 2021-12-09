@@ -14,4 +14,7 @@ int receive_U(int fd, uint8_t* a_rcv, uint8_t* c_rcv);
 int receive_S(int fd, uint8_t* a_rcv, uint8_t* c_rcv);
 int receive_I(int fd, uint8_t* buffer);
 
+void set_error(int n);
+void set_t_prop(int n);
+    
 #endif // _COM_H

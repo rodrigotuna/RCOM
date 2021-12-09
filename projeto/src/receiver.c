@@ -4,6 +4,7 @@
 
 #include "../header/config.h"
 #include "../header/app.h"
+#include "../header/com.h"
 
 int main(int argc, char ** argv){
     if ( (argc < 2) || 
@@ -14,6 +15,8 @@ int main(int argc, char ** argv){
       printf("Usage:\tnserial SerialPort\n\tex: nserial /dev/ttyS1\n");
       exit(1);
     }
+
+    set_t_prop(atoi(argv[3]));
 
     int fd = set_config(argv[1]);
 

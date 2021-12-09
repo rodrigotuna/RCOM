@@ -71,6 +71,7 @@ int ll_read(int fd, uint8_t * buffer) {
         if(res <= 0){
             send_response(fd, status, MSG_C_REJ(Nr));
             fprintf(stderr, "Error: Couldn't receive Information Frame, retrying.\n");
+            tries--;
         } else {
             send_response(fd, status, MSG_C_RR(Nr));
             break;

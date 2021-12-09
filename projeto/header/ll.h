@@ -8,7 +8,7 @@ typedef enum {
     RECEIVER
 } status_t;
 
-#define MAX_SIZE 5001
+#define MAX_SIZE 133
 
 int ll_open(int fd, status_t status);
 int ll_read(int fd, uint8_t * buffer);

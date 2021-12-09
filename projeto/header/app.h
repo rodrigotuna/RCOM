@@ -6,7 +6,7 @@
 
 #include "ll.h"
 
-#define DATA_PACKET_MAX_SIZE  4096
+#define DATA_PACKET_MAX_SIZE  128
 
 #define DATA_CTRL 1
 #define START_CTRL 2

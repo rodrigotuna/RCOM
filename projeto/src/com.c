@@ -2,12 +2,24 @@
 
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <stdint.h>
 
 #include "../header/flag.h"
 #include "../header/state_machine.h"
 #include "../header/utils.h"
+
+int error;
+int t_prop;
+
+void set_error(int n){
+    error = n;
+}
+
+void set_t_prop(int n){
+    t_prop = n;
+}
 
 int send_command(int fd, status_t status, uint8_t ctrl){
     int res;
@@ -61,7 +73,7 @@ int send_I_FRAME(int fd, uint8_t * buf, int size){
         return -1;
     }
 
-    uint8_t bcc2 = bcc_buf(buf, size);
+    uint8_t bcc2 = (rand()%100 >= error ? bcc_buf(buf, size) : ~bcc_buf(buf, size));
     buf[size] = bcc2;
 
     uint8_t stuff_buf[2*MAX_SIZE];
@@ -86,6 +98,7 @@ int send_I_FRAME(int fd, uint8_t * buf, int size){
 }
 
 int receive_U(int fd, uint8_t *a_rcv, uint8_t *c_rcv){
+    usleep(t_prop);
     u_states_t state = U_START;
     uint8_t byte;
 
@@ -101,6 +114,7 @@ int receive_U(int fd, uint8_t *a_rcv, uint8_t *c_rcv){
 }
 
 int receive_S(int fd, uint8_t* a_rcv, uint8_t* c_rcv) {
+    usleep(t_prop);
     s_states_t state = S_START;
     uint8_t byte;
 
@@ -116,6 +130,7 @@ int receive_S(int fd, uint8_t* a_rcv, uint8_t* c_rcv) {
 }
 
 int receive_I(int fd, uint8_t* buffer) {
+    usleep(t_prop);
     i_states_t state = I_START;
     uint8_t byte;
     uint8_t buf[2*MAX_SIZE];
