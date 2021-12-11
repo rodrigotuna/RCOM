@@ -12,7 +12,7 @@ int application (int fd, status_t status, char* path) {
     fileDescriptor = fd;
 
     if(status == TRANSMITTER){
-        if(app_send_file(fd,path) < 0){
+        if(app_send_file(path) < 0){
             fprintf(stderr, "Error: Couldn't send file to Receiver.\n");
             return -1;
         }
@@ -87,7 +87,7 @@ int app_send_control_packet(int ctrl_flag, uint32_t file_size, const char* filen
     return 0;
 }
 
-int app_send_file(int fd, char* path){
+int app_send_file(char* path){
 
     FILE* file;
     unsigned int size = 0, sequence_number = 0;

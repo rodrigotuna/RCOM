@@ -1,3 +1,7 @@
+/**
+ * @brief Link Layer Flag Macros
+ */
+
 #ifndef _FLAG_H_
 #define _FLAG_H_
 
