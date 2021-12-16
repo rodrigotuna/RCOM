@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
         exit(-1);
     }
 
-    if (!valid_url(argv[1])){
+    if (valid_url(argv[1]) == 0){
         fprintf(stderr, "Url format: ftp://[<user>:<password>@]<host>/<url-path>\n");
         exit(-1);
     }
