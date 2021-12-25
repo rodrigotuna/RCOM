@@ -7,7 +7,7 @@
 
 int main(int argc, char *argv[]) {
     struct hostent *h;
-    url_data_t url_data;
+    url_data_t *url_data = malloc(sizeof(url_data_t));
 
     if (argc != 2) {
         fprintf(stderr, "Usage: ./download ftp://[<user>:<password>@]<host>/<url-path>\n");
@@ -19,9 +19,9 @@ int main(int argc, char *argv[]) {
         exit(-1);
     }
 
-    parse_url(argv[1], &url_data);
+    parse_url(argv[1], url_data);
 
-    if ((h = gethostbyname(url_data.host)) == NULL) {
+    if ((h = gethostbyname(url_data->host)) == NULL) {
         herror("gethostbyname()");
         exit(-1);
     }
@@ -29,5 +29,7 @@ int main(int argc, char *argv[]) {
     printf("Host name  : %s\n", h->h_name);
     printf("IP Address : %s\n", inet_ntoa(*((struct in_addr *) h->h_addr)));
 
+
+    free(url_data);
     return 0;
 }

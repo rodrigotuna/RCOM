@@ -4,10 +4,12 @@
 #include "macros.h"
 
 typedef struct url_data{
+    char url[MAX_STR_LEN];
     char user[MAX_STR_LEN];
     char pwd[MAX_STR_LEN];
     char host[MAX_STR_LEN];
     char path[MAX_STR_LEN];
+    char filename[MAX_STR_LEN];
 } url_data_t;
 
 int valid_url(char * url);

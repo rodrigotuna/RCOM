@@ -1,11 +1,15 @@
 #include "../header/url.h"
 
+#define _GNU_SOURCE     
+#include <libgen.h>   
+#undef basename      
+#include <string.h>     
 #include <stdlib.h>
 #include <regex.h>
 
 int valid_url(char * url){
     regex_t regex;
-    if(regcomp(&regex, "^ftp://([[a-zA-Z0-9]+:[a-zA-Z0-9]+@])?([.a-z0-9-]+)/([./a-z0-9-]+)$", REG_EXTENDED)){
+    if(regcomp(&regex, "^ftp://([a-zA-Z0-9]+:[a-zA-Z0-9]+@)?([.a-z0-9-]+)/([./a-z0-9-]+)$", REG_EXTENDED)){
         return 0;
     }
 
@@ -19,5 +23,24 @@ int valid_url(char * url){
 }
 
 int parse_url(char * url, url_data_t * url_data){
+
+    strcpy(url_data->url, url);
+    url = url + 6;
+
+    if(strchr(url,'@') != NULL){
+        memcpy(url_data->user, url, strcspn(url, ":"));
+        url = url + strcspn(url, ":") + 1;
+        memcpy(url_data->pwd, url, strcspn(url, "@"));
+        url = url + strcspn(url, "@") + 1;
+    }
+
+    memcpy(url_data->host, url, strcspn(url, "/"));
+    url = url + strcspn(url, "/") + 1;
+
+    strcpy(url_data->filename, basename(url));
+    printf("%s\n", url_data->filename);
+    strcpy(url_data->path, dirname(url));
+    printf("%s\n", url_data->path);
+
     return 0;
 }
