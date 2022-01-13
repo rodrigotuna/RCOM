@@ -96,6 +96,7 @@ int main(int argc, char *argv[]) {
         exit(-1);
     }
 
+    printf("Transfer complete.\n");
 
     free(url_data);
     free(response);

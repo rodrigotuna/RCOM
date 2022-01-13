@@ -54,7 +54,6 @@ void read_response(int sockfd, char * response){
     }
 
     strcpy(response, line);
-    printf("%s\n", response);
     fclose(fp);
     free(line);
 }
