@@ -4,7 +4,7 @@
 
 ```
 ifconfig eth0 up
-ifconfig eth0 172.16.41.1
+ifconfig eth0 172.16.41.1/24
 ifconfig
 ```
 Register Ip and MAC addresses.
@@ -12,13 +12,13 @@ Register Ip and MAC addresses.
 ### Tux 43
 ```
 ifconfig eth0 up
-ifconfig eth0 172.16.40.1
+ifconfig eth0 172.16.40.1/24
 ```
 
 ### Tux 44
 ```
 ifconfig eth0 up
-ifconfig eth0 172.16.40.254
+ifconfig eth0 172.16.40.254/24
 ```
 
 # Step 2
