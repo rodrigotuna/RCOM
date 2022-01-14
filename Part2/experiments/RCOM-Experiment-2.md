@@ -9,6 +9,9 @@ ifconfig
 ```
 Register Ip and MAC addresses.
 
+IP: 172.16.41.1
+MAC: 00:1f:29:d7:45:c4
+
 ### Tux 43
 ```
 ifconfig eth0 up
@@ -115,10 +118,6 @@ ping 172.16.40.254 #tux44
 
 # Step 8
 
-### Tux 42
-```
-ping -b 172.16.41.255
-```
 ### Tux 43
 ```
 ping -b 172.16.40.255
@@ -127,6 +126,10 @@ ping -b 172.16.40.255
 # Step 9 
 - Stop captures, save logs.
 
+# Step 10
+- Repeat Steps 7,8 and 9 for Tux 42
 
-
-
+### Tux 42
+```
+ping -b 172.16.41.255
+```

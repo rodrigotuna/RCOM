@@ -48,6 +48,14 @@ ifconfig
 ```
  Take ip and mac addresses of eth0 eth1
 
+#### eth0
+ IP: 172.16.40.254
+ MAC: 00:21:5a:5a:7b:ea
+
+#### eth1
+ IP: 172.16.41.253
+ MAC: 00:c0:df:25:1a:f4
+
 # Step 6
 
 ### Tux 42
