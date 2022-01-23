@@ -1,0 +1,84 @@
+      No.     Time          Source           Destination                  Protocol Length   Info
+      1 0.000000000    Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+      2 1.999795290    Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+      3 2.629701935    Cisco_d4:1c:03        Cisco_d4:1c:03        LOOP     60     Reply
+      4 4.004696128    Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+      5 5.930750008    Cisco_d4:1c:03        CDP/VTP/DTP/PAgP/UDLD DTP      60     Dynamic Trunk Protocol
+      6 5.930842966    Cisco_d4:1c:03        CDP/VTP/DTP/PAgP/UDLD DTP      90     Dynamic Trunk Protocol
+      7 6.014897998    Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+      8 7.419067979    Cisco_d4:1c:03        CDP/VTP/DTP/PAgP/UDLD CDP      450    Device ID: tux-sw4  Port ID: FastEthernet0/1  
+      9 8.014521551    Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     10 10.019475048   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     11 12.029534444   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     12 12.632786891   Cisco_d4:1c:03        Cisco_d4:1c:03        LOOP     60     Reply
+     13 14.029197037   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     14 16.034154027   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     15 18.044249739   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     16 20.043984128   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     17 22.048874071   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     18 22.636310585   Cisco_d4:1c:03        Cisco_d4:1c:03        LOOP     60     Reply
+     19 24.058944571   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     20 26.058684757   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     21 28.063606338   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     22 30.073701631   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     23 32.073443493   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     24 32.644589578   Cisco_d4:1c:03        Cisco_d4:1c:03        LOOP     60     Reply
+     25 34.078313462   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     26 35.932106898   Cisco_d4:1c:03        CDP/VTP/DTP/PAgP/UDLD DTP      60     Dynamic Trunk Protocol
+     27 35.932198947   Cisco_d4:1c:03        CDP/VTP/DTP/PAgP/UDLD DTP      90     Dynamic Trunk Protocol
+     28 36.088331372   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     29 38.088152293   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     30 40.093033157   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     31 40.646859922   HewlettP_61:2f:d4     Broadcast             ARP      42     Who has 172.16.40.254? Tell 172.16.40.1
+     32 40.646991013   HewlettP_5a:7b:ea     HewlettP_61:2f:d4     ARP      60     172.16.40.254 is at 00:21:5a:5a:7b:ea
+     33 40.647000232   172.16.40.1           172.16.40.254         ICMP     98     Echo (ping) request  id=0x0fce, seq=1/256, ttl=64 (reply in 34)
+     34 40.647137748   172.16.40.254         172.16.40.1           ICMP     98     Echo (ping) reply    id=0x0fce, seq=1/256, ttl=64 (request in 33)
+     35 41.678619698   172.16.40.1           172.16.40.254         ICMP     98     Echo (ping) request  id=0x0fce, seq=2/512, ttl=64 (reply in 36)
+     36 41.678777677   172.16.40.254         172.16.40.1           ICMP     98     Echo (ping) reply    id=0x0fce, seq=2/512, ttl=64 (request in 35)
+     37 42.103131942   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     38 42.655996445   Cisco_d4:1c:03        Cisco_d4:1c:03        LOOP     60     Reply
+     39 42.702622642   172.16.40.1           172.16.40.254         ICMP     98     Echo (ping) request  id=0x0fce, seq=3/768, ttl=64 (reply in 40)
+     40 42.702753244   172.16.40.254         172.16.40.1           ICMP     98     Echo (ping) reply    id=0x0fce, seq=3/768, ttl=64 (request in 39)
+     41 43.726624958   172.16.40.1           172.16.40.254         ICMP     98     Echo (ping) request  id=0x0fce, seq=4/1024, ttl=64 (reply in 42)
+     42 43.726760169   172.16.40.254         172.16.40.1           ICMP     98     Echo (ping) reply    id=0x0fce, seq=4/1024, ttl=64 (request in 41)
+     43 44.102830992   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     44 44.750618613   172.16.40.1           172.16.40.254         ICMP     98     Echo (ping) request  id=0x0fce, seq=5/1280, ttl=64 (reply in 45)
+     45 44.750753754   172.16.40.254         172.16.40.1           ICMP     98     Echo (ping) reply    id=0x0fce, seq=5/1280, ttl=64 (request in 44)
+     46 45.774622046   172.16.40.1           172.16.40.254         ICMP     98     Echo (ping) request  id=0x0fce, seq=6/1536, ttl=64 (reply in 47)
+     47 45.774757257   172.16.40.254         172.16.40.1           ICMP     98     Echo (ping) reply    id=0x0fce, seq=6/1536, ttl=64 (request in 46)
+     48 45.818616235   HewlettP_5a:7b:ea     HewlettP_61:2f:d4     ARP      60     Who has 172.16.40.1? Tell 172.16.40.254
+     49 45.818623568   HewlettP_61:2f:d4     HewlettP_5a:7b:ea     ARP      42     172.16.40.1 is at 00:21:5a:61:2f:d4
+     50 46.107742656   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     51 46.798623314   172.16.40.1           172.16.40.254         ICMP     98     Echo (ping) request  id=0x0fce, seq=7/1792, ttl=64 (reply in 52)
+     52 46.798781293   172.16.40.254         172.16.40.1           ICMP     98     Echo (ping) reply    id=0x0fce, seq=7/1792, ttl=64 (request in 51)
+     53 47.822624442   172.16.40.1           172.16.40.254         ICMP     98     Echo (ping) request  id=0x0fce, seq=8/2048, ttl=64 (reply in 54)
+     54 47.822762167   172.16.40.254         172.16.40.1           ICMP     98     Echo (ping) reply    id=0x0fce, seq=8/2048, ttl=64 (request in 53)
+     55 48.112648732   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     56 48.846625361   172.16.40.1           172.16.40.254         ICMP     98     Echo (ping) request  id=0x0fce, seq=9/2304, ttl=64 (reply in 57)
+     57 48.846758756   172.16.40.254         172.16.40.1           ICMP     98     Echo (ping) reply    id=0x0fce, seq=9/2304, ttl=64 (request in 56)
+     58 49.870633892   172.16.40.1           172.16.40.254         ICMP     98     Echo (ping) request  id=0x0fce, seq=10/2560, ttl=64 (reply in 59)
+     59 49.870769033   172.16.40.254         172.16.40.1           ICMP     98     Echo (ping) reply    id=0x0fce, seq=10/2560, ttl=64 (request in 58)
+     60 50.117549989   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     61 50.894626709   172.16.40.1           172.16.40.254         ICMP     98     Echo (ping) request  id=0x0fce, seq=11/2816, ttl=64 (reply in 62)
+     62 50.894759895   172.16.40.254         172.16.40.1           ICMP     98     Echo (ping) reply    id=0x0fce, seq=11/2816, ttl=64 (request in 61)
+     63 51.918626860   172.16.40.1           172.16.40.254         ICMP     98     Echo (ping) request  id=0x0fce, seq=12/3072, ttl=64 (reply in 64)
+     64 51.918784350   172.16.40.254         172.16.40.1           ICMP     98     Echo (ping) reply    id=0x0fce, seq=12/3072, ttl=64 (request in 63)
+     65 52.122463049   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     66 52.651109810   Cisco_d4:1c:03        Cisco_d4:1c:03        LOOP     60     Reply
+     67 52.942625823   172.16.40.1           172.16.40.254         ICMP     98     Echo (ping) request  id=0x0fce, seq=13/3328, ttl=64 (reply in 68)
+     68 52.942761802   172.16.40.254         172.16.40.1           ICMP     98     Echo (ping) reply    id=0x0fce, seq=13/3328, ttl=64 (request in 67)
+     69 53.966621783   172.16.40.1           172.16.40.254         ICMP     98     Echo (ping) request  id=0x0fce, seq=14/3584, ttl=64 (reply in 70)
+     70 53.966757483   172.16.40.254         172.16.40.1           ICMP     98     Echo (ping) reply    id=0x0fce, seq=14/3584, ttl=64 (request in 69)
+     71 54.127326383   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     72 54.990623190   172.16.40.1           172.16.40.254         ICMP     98     Echo (ping) request  id=0x0fce, seq=15/3840, ttl=64 (reply in 73)
+     73 54.990758541   172.16.40.254         172.16.40.1           ICMP     98     Echo (ping) reply    id=0x0fce, seq=15/3840, ttl=64 (request in 72)
+     74 56.132272967   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     75 58.137319632   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     76 60.142151468   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     77 62.147051119   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     78 62.659467164   Cisco_d4:1c:03        Cisco_d4:1c:03        LOOP     60     Reply
+     79 64.152176564   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     80 65.938598249   Cisco_d4:1c:03        CDP/VTP/DTP/PAgP/UDLD DTP      60     Dynamic Trunk Protocol
+     81 65.938691626   Cisco_d4:1c:03        CDP/VTP/DTP/PAgP/UDLD DTP      90     Dynamic Trunk Protocol
+     82 66.170555775   Cisco_d4:1c:03        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/1/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8003
+     83 67.428912121   Cisco_d4:1c:03        CDP/VTP/DTP/PAgP/UDLD CDP      450    Device ID: tux-sw4  Port ID: FastEthernet0/1  

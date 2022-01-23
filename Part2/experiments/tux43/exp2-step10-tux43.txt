@@ -1,287 +1,34 @@
-No.     Time           Source                Destination           Protocol Length Info
+        No    Time           Source                   Destination           Protocol Length   Info
       1 0.000000000    Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 1: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
       2 0.767319386    Cisco_d4:1c:04        Cisco_d4:1c:04        LOOP     60     Reply
-
-Frame 2: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-Ethernet II, Src: Cisco_d4:1c:04 (30:37:a6:d4:1c:04), Dst: Cisco_d4:1c:04 (30:37:a6:d4:1c:04)
-Configuration Test Protocol (loopback)
-Data (40 bytes)
-
-0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
-0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
-0020  00 00 00 00 00 00 00 00                           ........
-
-No.     Time           Source                Destination           Protocol Length Info
       3 2.005261366    Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 3: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
       4 4.008551990    Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 4: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
       5 6.013793801    Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 5: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
       6 8.019355898    Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 6: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
       7 10.024925468   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 7: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
       8 10.770020391   Cisco_d4:1c:04        Cisco_d4:1c:04        LOOP     60     Reply
-
-Frame 8: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-Ethernet II, Src: Cisco_d4:1c:04 (30:37:a6:d4:1c:04), Dst: Cisco_d4:1c:04 (30:37:a6:d4:1c:04)
-Configuration Test Protocol (loopback)
-Data (40 bytes)
-
-0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
-0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
-0020  00 00 00 00 00 00 00 00                           ........
-
-No.     Time           Source                Destination           Protocol Length Info
       9 12.030114480   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 9: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      10 14.033340921   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 10: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      11 16.038740640   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 11: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      12 18.043893475   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 12: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      13 20.049214695   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 13: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      14 20.769419294   Cisco_d4:1c:04        Cisco_d4:1c:04        LOOP     60     Reply
-
-Frame 14: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-Ethernet II, Src: Cisco_d4:1c:04 (30:37:a6:d4:1c:04), Dst: Cisco_d4:1c:04 (30:37:a6:d4:1c:04)
-Configuration Test Protocol (loopback)
-Data (40 bytes)
-
-0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
-0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
-0020  00 00 00 00 00 00 00 00                           ........
-
-No.     Time           Source                Destination           Protocol Length Info
      15 22.054695358   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 15: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      16 24.057945125   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 16: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      17 26.063171362   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 17: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      18 28.068842619   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 18: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      19 30.072109567   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 19: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      20 30.777014752   Cisco_d4:1c:04        Cisco_d4:1c:04        LOOP     60     Reply
-
-Frame 20: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-Ethernet II, Src: Cisco_d4:1c:04 (30:37:a6:d4:1c:04), Dst: Cisco_d4:1c:04 (30:37:a6:d4:1c:04)
-Configuration Test Protocol (loopback)
-Data (40 bytes)
-
-0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
-0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
-0020  00 00 00 00 00 00 00 00                           ........
-
-No.     Time           Source                Destination           Protocol Length Info
      21 32.077412767   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 21: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      22 34.082950560   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 22: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      23 36.088272967   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 23: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      24 38.093515686   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 24: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      25 40.097002490   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 25: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      26 40.784713712   Cisco_d4:1c:04        Cisco_d4:1c:04        LOOP     60     Reply
-
-Frame 26: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-Ethernet II, Src: Cisco_d4:1c:04 (30:37:a6:d4:1c:04), Dst: Cisco_d4:1c:04 (30:37:a6:d4:1c:04)
-Configuration Test Protocol (loopback)
-Data (40 bytes)
-
-0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
-0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
-0020  00 00 00 00 00 00 00 00                           ........
-
-No.     Time           Source                Destination           Protocol Length Info
      27 42.124385445   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 27: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      28 44.123671447   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 28: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      29 46.128988126   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 29: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      30 48.134345662   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 30: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      31 50.139799228   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 31: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
-
-No.     Time           Source                Destination           Protocol Length Info
      32 50.792396958   Cisco_d4:1c:04        Cisco_d4:1c:04        LOOP     60     Reply
-
-Frame 32: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-Ethernet II, Src: Cisco_d4:1c:04 (30:37:a6:d4:1c:04), Dst: Cisco_d4:1c:04 (30:37:a6:d4:1c:04)
-Configuration Test Protocol (loopback)
-Data (40 bytes)
-
-0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
-0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
-0020  00 00 00 00 00 00 00 00                           ........
-
-No.     Time           Source                Destination           Protocol Length Info
      33 52.143418029   Cisco_d4:1c:04        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/40/30:37:a6:d4:1c:00  Cost = 0  Port = 0x8004
-
-Frame 33: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface eth0, id 0
-IEEE 802.3 Ethernet 
-Logical-Link Control
-Spanning Tree Protocol
