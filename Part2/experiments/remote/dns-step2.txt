@@ -1,0 +1,297 @@
+      No    Time           Source                   Destination           Protocol Length   Info
+      1 0.000000       controller            host                  HCI_EVT  46     Rcvd LE Meta (LE Advertising Report)
+      2 0.203018       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+      3 0.205800       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+      4 0.205930       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+      5 0.207793       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+      6 0.640055       controller            host                  HCI_EVT  46     Rcvd LE Meta (LE Advertising Report)
+      7 0.843340       host                  controller            HCI_CMD  6      Sent LE Set Scan EnableS
+      8 0.846055       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+      9 0.846158       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+     10 0.847987       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+     11 1.371126       controller            host                  HCI_EVT  46     Rcvd LE Meta (LE Advertising Report)
+     12 1.372827       controller            host                  HCI_EVT  46     Rcvd LE Meta (LE Advertising Report)
+     13 1.575134       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+     14 1.577019       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+     15 1.577156       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+     16 1.578770       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+     17 1.656801       controller            host                  HCI_EVT  37     Rcvd LE Meta (LE Advertising Report)
+     18 2.340189179    172.29.0.19           35.186.224.47         TLSv1.2  103    Application Data
+     19 2.367392487    172.29.0.19           162.159.135.234       TLSv1.2  110    Application Data
+     20 2.375042975    35.186.224.47         172.29.0.19           TCP      68     443 → 53172 [ACK] Seq=1 Ack=36 Win=266 Len=0 TSval=1728515785 TSecr=1594362478
+     21 2.385529991    162.159.135.234       172.29.0.19           TCP      56     443 → 40034 [ACK] Seq=1 Ack=55 Win=85 Len=0
+     22 2.388102597    35.186.224.47         172.29.0.19           TLSv1.2  99     Application Data
+     23 2.388135918    172.29.0.19           35.186.224.47         TCP      68     53172 → 443 [ACK] Seq=36 Ack=32 Win=502 Len=0 TSval=1594362526 TSecr=1728515799
+     24 2.340189179    172.29.0.19           35.186.224.47         TLSv1.2  103    [TCP Spurious Retransmission] , Application Data
+     25 2.340422506    192.168.1.71          193.136.28.199        PPP Comp 140    Compressed data
+     26 2.367392487    172.29.0.19           162.159.135.234       TLSv1.2  110    [TCP Spurious Retransmission] , Application Data
+     27 2.367609977    192.168.1.71          193.136.28.199        PPP Comp 111    Compressed data
+     28 2.374854822    193.136.28.199        192.168.1.71          PPP Comp 109    Compressed data
+     29 2.375042975    35.186.224.47         172.29.0.19           TCP      68     443 → 53172 [ACK] Seq=1 Ack=36 Win=266 Len=0 TSval=1728515785 TSecr=1594362478
+     30 2.385310103    193.136.28.199        192.168.1.71          PPP Comp 97     Compressed data
+     31 2.385529991    162.159.135.234       172.29.0.19           TCP      56     [TCP Dup ACK 21#1] 443 → 40034 [ACK] Seq=1 Ack=55 Win=85 Len=0
+     32 2.385547765    192.168.1.71          193.136.28.199        GRE      48     Encapsulated PPP
+     33 2.387901774    193.136.28.199        192.168.1.71          PPP Comp 136    Compressed data
+     34 2.388102597    35.186.224.47         172.29.0.19           TCP      99     [TCP Retransmission] 443 → 53172 [PSH, ACK] Seq=1 Ack=36 Win=266 Len=31 TSval=1728515799 TSecr=1594362478
+     35 2.388135918    172.29.0.19           35.186.224.47         TCP      68     53172 → 443 [ACK] Seq=36 Ack=32 Win=502 Len=0 TSval=1594362526 TSecr=1728515799
+     36 2.388313994    192.168.1.71          193.136.28.199        PPP Comp 109    Compressed data
+     37 2.451829770    193.136.28.199        192.168.1.71          GRE      58     Encapsulated PPP
+     38 2.340422506    192.168.1.71          193.136.28.199        PPP Comp 138    Compressed data
+     39 2.367609977    192.168.1.71          193.136.28.199        PPP Comp 109    Compressed data
+     40 2.374854822    193.136.28.199        192.168.1.71          PPP Comp 107    Compressed data
+     41 2.385310103    193.136.28.199        192.168.1.71          PPP Comp 95     Compressed data
+     42 2.385547765    192.168.1.71          193.136.28.199        GRE      46     Encapsulated PPP
+     43 2.387901774    193.136.28.199        192.168.1.71          PPP Comp 134    Compressed data
+     44 2.388313994    192.168.1.71          193.136.28.199        PPP Comp 107    Compressed data
+     45 2.451829770    193.136.28.199        192.168.1.71          GRE      56     Encapsulated PPP
+     46 2.508172106    193.136.28.199        192.168.1.71          PPP Comp 123    Compressed data
+     47 2.508604876    192.168.1.71          193.136.28.199        PPP Comp 61     Compressed data
+     48 2.550882       controller            host                  HCI_EVT  46     Rcvd LE Meta (LE Advertising Report)
+     49 2.508373237    162.159.135.234       172.29.0.19           TLSv1.2  88     Application Data
+     50 2.508428571    172.29.0.19           162.159.135.234       TCP      56     40034 → 443 [ACK] Seq=55 Ack=33 Win=1940 Len=0
+     51 2.508172106    193.136.28.199        192.168.1.71          PPP Comp 125    Compressed data
+     52 2.508373237    162.159.135.234       172.29.0.19           TLSv1.2  88     [TCP Spurious Retransmission] , Application Data
+     53 2.508428571    172.29.0.19           162.159.135.234       TCP      56     [TCP Dup ACK 50#1] 40034 → 443 [ACK] Seq=55 Ack=33 Win=1940 Len=0
+     54 2.508604876    192.168.1.71          193.136.28.199        PPP Comp 63     Compressed data
+     55 2.571750644    193.136.28.199        192.168.1.71          GRE      58     Encapsulated PPP
+     56 2.751110       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+     57 2.752910       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+     58 2.753000       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+     59 2.755948       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+     60 2.571750644    193.136.28.199        192.168.1.71          GRE      56     Encapsulated PPP
+     61 2.836869       controller            host                  HCI_EVT  46     Rcvd LE Meta (LE Advertising Report)
+     62 3.039145       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+     63 3.122042       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+     64 3.122164       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+     65 3.123995       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+     66 3.688871       controller            host                  HCI_EVT  46     Rcvd LE Meta (LE Advertising Report)
+     67 3.891061       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+     68 3.892824       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+     69 3.892935       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+     70 3.893830       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+     71 3.960807       controller            host                  HCI_EVT  37     Rcvd LE Meta (LE Advertising Report)
+     72 3.967724694    192.168.1.71          192.168.1.255         UDP      88     57621 → 57621 Len=44
+     73 3.970473276    193.136.28.199        192.168.1.71          PPP LCP  58     Echo Request
+     74 3.970817056    192.168.1.71          193.136.28.199        PPP LCP  62     Echo Reply
+     75 3.967724694    192.168.1.71          192.168.1.255         UDP      86     57621 → 57621 Len=44
+     76 3.970473276    193.136.28.199        192.168.1.71          PPP LCP  56     Echo Request
+     77 3.970817056    192.168.1.71          193.136.28.199        PPP LCP  60     Echo Reply
+     78 4.033921413    193.136.28.199        192.168.1.71          GRE      56     Encapsulated PPP
+     79 4.157088       controller            host                  HCI_EVT  46     Rcvd LE Meta (LE Advertising Report)
+     80 4.033921413    193.136.28.199        192.168.1.71          GRE      58     Encapsulated PPP
+     81 4.328915       controller            host                  HCI_EVT  46     Rcvd LE Meta (LE Advertising Report)
+     82 4.359390       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+     83 4.362100       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+     84 4.362194       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+     85 4.363835       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+     86 5.270818       controller            host                  HCI_EVT  37     Rcvd LE Meta (LE Advertising Report)
+     87 5.271906       controller            host                  HCI_EVT  30     Rcvd LE Meta (LE Advertising Report)
+     88 5.475112       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+     89 5.477798       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+     90 5.477915       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+     91 5.478798       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+     92 5.479049       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+     93 5.491842       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+     94 5.493833       controller            host                  HCI_EVT  4      Rcvd Inquiry Complete
+     95 6.238385       host                  controller            HCI_CMD  10     Sent LE Set Random Address
+     96 6.238866       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Random Address)
+     97 6.238961       host                  controller            HCI_CMD  11     Sent LE Set Scan Parameters
+     98 6.240023       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Parameters)
+     99 6.240138       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    100 6.240884       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    101 6.240949       host                  controller            HCI_CMD  9      Sent Inquiry
+    102 6.241997       controller            host                  HCI_EVT  7      Rcvd Command Status (Inquiry)
+    103 6.262974741    192.168.1.71          224.0.0.22            IGMPv3   64     Membership Report / Join group 239.255.255.250 for any sources / Join group 224.0.0.251 for any sources
+    104 6.262974741    192.168.1.71          224.0.0.22            IGMPv3   62     Membership Report / Join group 239.255.255.250 for any sources / Join group 224.0.0.251 for any sources
+    105 6.716878       controller            host                  HCI_EVT  46     Rcvd LE Meta (LE Advertising Report)
+    106 6.919332       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    107 6.922112       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    108 6.922257       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    109 6.924034       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    110 6.998049       controller            host                  HCI_EVT  258    Rcvd Extended Inquiry Result
+    111 7.199390       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    112 7.201974       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    113 7.202072       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    114 7.204050       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    115 7.267198       controller            host                  HCI_EVT  37     Rcvd LE Meta (LE Advertising Report)
+    116 7.268020       controller            host                  HCI_EVT  30     Rcvd LE Meta (LE Advertising Report)
+    117 7.471089       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    118 7.472895       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    119 7.473025       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    120 7.473816       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    121 7.546818       controller            host                  HCI_EVT  46     Rcvd LE Meta (LE Advertising Report)
+    122 7.747034       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    123 7.748803       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    124 7.748883       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    125 7.750799       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    126 8.385872       controller            host                  HCI_EVT  37     Rcvd LE Meta (LE Advertising Report)
+    127 8.386877       controller            host                  HCI_EVT  30     Rcvd LE Meta (LE Advertising Report)
+    128 8.477846       controller            host                  HCI_EVT  46     Rcvd LE Meta (LE Advertising Report)
+    129 8.591223       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    130 8.592859       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    131 8.592978       host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    132 8.593812       controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    133 9.031884282    2001:818:df62:d400:c145:fb45:6ec5:e34e 2600:1901:1:a98::     TLSv1.2  131    Application Data
+    134 9.031884282    2001:818:df62:d400:c145:fb45:6ec5:e34e 2600:1901:1:a98::     TCP      129    [TCP Retransmission] 39746 → 443 [PSH, ACK] Seq=1 Ack=1 Win=501 Len=43 TSval=3615107181 TSecr=3366032936
+    135 9.034116057    193.136.28.199        192.168.1.71          PPP LCP  58     Echo Request
+    136 9.034116057    193.136.28.199        192.168.1.71          PPP LCP  56     Echo Request
+    137 9.034688966    192.168.1.71          193.136.28.199        PPP LCP  62     Echo Reply
+    138 9.057321890    2600:1901:1:a98::     2001:818:df62:d400:c145:fb45:6ec5:e34e TCP      88     443 → 39746 [ACK] Seq=1 Ack=44 Win=272 Len=0 TSval=3366062963 TSecr=3615107181
+    139 9.034688966    192.168.1.71          193.136.28.199        PPP LCP  60     Echo Reply
+    140 9.070730792    2600:1901:1:a98::     2001:818:df62:d400:c145:fb45:6ec5:e34e TLSv1.2  128    Application Data
+    141 9.070776509    2001:818:df62:d400:c145:fb45:6ec5:e34e 2600:1901:1:a98::     TCP      88     39746 → 443 [ACK] Seq=44 Ack=41 Win=501 Len=0 TSval=3615107220 TSecr=3366062977
+    142 9.057321890    2600:1901:1:a98::     2001:818:df62:d400:c145:fb45:6ec5:e34e TCP      86     443 → 39746 [ACK] Seq=1 Ack=44 Win=272 Len=0 TSval=3366062963 TSecr=3615107181
+    143 9.097690761    193.136.28.199        192.168.1.71          GRE      48     Encapsulated PPP
+    144 9.070730792    2600:1901:1:a98::     2001:818:df62:d400:c145:fb45:6ec5:e34e TLSv1.2  126    [TCP Spurious Retransmission] , Application Data
+    145 9.070776509    2001:818:df62:d400:c145:fb45:6ec5:e34e 2600:1901:1:a98::     TCP      86     [TCP Dup ACK 141#1] 39746 → 443 [ACK] Seq=44 Ack=41 Win=501 Len=0 TSval=3615107220 TSecr=3366062977
+    146 9.097690761    193.136.28.199        192.168.1.71          GRE      46     Encapsulated PPP
+    147 10.154865      controller            host                  HCI_EVT  46     Rcvd LE Meta (LE Advertising Report)
+    148 10.359063      host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    149 10.359899      controller            host                  HCI_EVT  46     Rcvd LE Meta (LE Advertising Report)
+    150 10.362867      controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    151 10.362984      host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    152 10.363836      controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    153 10.375835      controller            host                  HCI_EVT  37     Rcvd LE Meta (LE Advertising Report)
+    154 10.376891      controller            host                  HCI_EVT  30     Rcvd LE Meta (LE Advertising Report)
+    155 10.563384      host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    156 10.566127      controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    157 10.566227      host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    158 10.568076      controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    159 10.780078970   172.29.0.19           142.250.200.142       ICMP     100    Echo (ping) request  id=0x0001, seq=1/256, ttl=64 (reply in 160)
+    160 10.809402638   142.250.200.142       172.29.0.19           ICMP     100    Echo (ping) reply    id=0x0001, seq=1/256, ttl=114 (request in 159)
+    161 10.996959      controller            host                  HCI_EVT  46     Rcvd LE Meta (LE Advertising Report)
+    162 10.780078970   172.29.0.19           142.250.200.142       ICMP     100    Echo (ping) request  id=0x0001, seq=1/256, ttl=64 (reply in 167)
+    163 10.780145934   192.168.1.71          193.136.28.199        PPP Comp 135    Compressed data
+    164 10.780145934   192.168.1.71          193.136.28.199        PPP Comp 137    Compressed data
+    165 10.809261395   193.136.28.199        192.168.1.71          PPP Comp 139    Compressed data
+    166 10.809261395   193.136.28.199        192.168.1.71          PPP Comp 141    Compressed data
+    167 10.809402638   142.250.200.142       172.29.0.19           ICMP     100    Echo (ping) reply    id=0x0001, seq=1/256, ttl=114 (request in 162)
+    168 11.199435      host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    169 11.201926      controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    170 11.202064      host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    171 11.204212      controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    172 11.309999038   192.168.1.71          193.136.28.199        GRE      48     Encapsulated PPP
+    173 11.309999038   192.168.1.71          193.136.28.199        GRE      46     Encapsulated PPP
+    174 11.610032      controller            host                  HCI_EVT  46     Rcvd LE Meta (LE Advertising Report)
+    175 11.782288349   192.168.1.71          193.136.28.199        PPP Comp 135    Compressed data
+    176 11.781993131   172.29.0.19           142.250.200.142       ICMP     100    Echo (ping) request  id=0x0001, seq=2/512, ttl=64 (no response found!)
+    177 11.782288349   192.168.1.71          193.136.28.199        PPP Comp 137    Compressed data
+    178 11.811120      host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    179 11.812897      controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    180 11.813012      host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    181 11.813899      controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    182 11.781993131   172.29.0.19           142.250.200.142       ICMP     100    Echo (ping) request  id=0x0001, seq=2/512, ttl=64 (reply in 183)
+    183 11.811101780   142.250.200.142       172.29.0.19           ICMP     100    Echo (ping) reply    id=0x0001, seq=2/512, ttl=114 (request in 182)
+    184 11.810832226   193.136.28.199        192.168.1.71          PPP Comp 139    Compressed data
+    185 11.810832226   193.136.28.199        192.168.1.71          PPP Comp 141    Compressed data
+    186 11.811101780   142.250.200.142       172.29.0.19           ICMP     100    Echo (ping) reply    id=0x0001, seq=2/512, ttl=114
+    187 12.151417971   2001:818:df62:d400:c145:fb45:6ec5:e34e 2600:1901:1:c36::     TCP      86     41686 → 443 [ACK] Seq=1 Ack=1 Win=514 Len=0 TSval=2663309318 TSecr=1799476368
+    188 12.151417971   2001:818:df62:d400:c145:fb45:6ec5:e34e 2600:1901:1:c36::     TCP      88     [TCP Dup ACK 187#1] 41686 → 443 [ACK] Seq=1 Ack=1 Win=514 Len=0 TSval=2663309318 TSecr=1799476368
+    189 12.172151554   2600:1901:1:c36::     2001:818:df62:d400:c145:fb45:6ec5:e34e TCP      88     [TCP ACKed unseen segment] 443 → 41686 [ACK] Seq=1 Ack=2 Win=1050 Len=0 TSval=1799521425 TSecr=2663219038
+    190 12.172151554   2600:1901:1:c36::     2001:818:df62:d400:c145:fb45:6ec5:e34e TCP      86     [TCP Dup ACK 189#1] [TCP ACKed unseen segment] 443 → 41686 [ACK] Seq=1 Ack=2 Win=1050 Len=0 TSval=1799521425 TSecr=2663219038
+    191 12.311306037   192.168.1.71          193.136.28.199        GRE      48     Encapsulated PPP
+    192 12.311306037   192.168.1.71          193.136.28.199        GRE      46     Encapsulated PPP
+    193 12.783603375   192.168.1.71          193.136.28.199        PPP Comp 135    Compressed data
+    194 12.783313221   172.29.0.19           142.250.200.142       ICMP     100    Echo (ping) request  id=0x0001, seq=3/768, ttl=64 (reply in 198)
+    195 12.812340111   193.136.28.199        192.168.1.71          PPP Comp 139    Compressed data
+    196 12.783603375   192.168.1.71          193.136.28.199        PPP Comp 137    Compressed data
+    197 12.812340111   193.136.28.199        192.168.1.71          PPP Comp 141    Compressed data
+    198 12.812621748   142.250.200.142       172.29.0.19           ICMP     100    Echo (ping) reply    id=0x0001, seq=3/768, ttl=114 (request in 194)
+    199 12.873942      controller            host                  HCI_EVT  37     Rcvd LE Meta (LE Advertising Report)
+    200 12.874964      controller            host                  HCI_EVT  30     Rcvd LE Meta (LE Advertising Report)
+    201 12.783313221   172.29.0.19           142.250.200.142       ICMP     100    Echo (ping) request  id=0x0001, seq=3/768, ttl=64 (reply in 202)
+    202 12.812621748   142.250.200.142       172.29.0.19           ICMP     100    Echo (ping) reply    id=0x0001, seq=3/768, ttl=114 (request in 201)
+    203 13.079453      host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    204 13.082161      controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    205 13.082294      host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    206 13.084099      controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    207 13.313425816   192.168.1.71          193.136.28.199        GRE      46     Encapsulated PPP
+    208 13.313425816   192.168.1.71          193.136.28.199        GRE      48     Encapsulated PPP
+    209 13.721894      controller            host                  HCI_EVT  46     Rcvd LE Meta (LE Advertising Report)
+    210 13.785212370   192.168.1.71          193.136.28.199        PPP Comp 135    Compressed data
+    211 13.814366857   193.136.28.199        192.168.1.71          PPP Comp 139    Compressed data
+    212 13.784965057   172.29.0.19           142.250.200.142       ICMP     100    Echo (ping) request  id=0x0001, seq=4/1024, ttl=64 (reply in 215)
+    213 13.785212370   192.168.1.71          193.136.28.199        PPP Comp 137    Compressed data
+    214 13.814366857   193.136.28.199        192.168.1.71          PPP Comp 141    Compressed data
+    215 13.814682674   142.250.200.142       172.29.0.19           ICMP     100    Echo (ping) reply    id=0x0001, seq=4/1024, ttl=114 (request in 212)
+    216 13.923034      host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    217 13.936076      controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    218 13.936209      host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    219 13.937991      controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    220 13.784965057   172.29.0.19           142.250.200.142       ICMP     100    Echo (ping) request  id=0x0001, seq=4/1024, ttl=64 (reply in 221)
+    221 13.814682674   142.250.200.142       172.29.0.19           ICMP     100    Echo (ping) reply    id=0x0001, seq=4/1024, ttl=114 (request in 220)
+    222 13.979294626   193.136.28.199        192.168.1.71          PPP LCP  56     Echo Request
+    223 13.979579916   192.168.1.71          193.136.28.199        GRE      46     Encapsulated PPP
+    224 13.979871748   192.168.1.71          193.136.28.199        PPP LCP  56     Echo Reply
+    225 14.043789479   193.136.28.199        192.168.1.71          GRE      56     Encapsulated PPP
+    226 13.979294626   193.136.28.199        192.168.1.71          PPP LCP  58     Echo Request
+    227 13.979579916   192.168.1.71          193.136.28.199        GRE      48     Encapsulated PPP
+    228 13.979871748   192.168.1.71          193.136.28.199        PPP LCP  58     Echo Reply
+    229 14.043789479   193.136.28.199        192.168.1.71          GRE      58     Encapsulated PPP
+    230 14.786983031   172.29.0.19           142.250.200.142       ICMP     100    Echo (ping) request  id=0x0001, seq=5/1280, ttl=64 (no response found!)
+    231 14.787221803   192.168.1.71          193.136.28.199        PPP Comp 135    Compressed data
+    232 14.815986811   193.136.28.199        192.168.1.71          PPP Comp 139    Compressed data
+    233 14.786983031   172.29.0.19           142.250.200.142       ICMP     100    Echo (ping) request  id=0x0001, seq=5/1280, ttl=64 (reply in 236)
+    234 14.787221803   192.168.1.71          193.136.28.199        PPP Comp 137    Compressed data
+    235 14.815986811   193.136.28.199        192.168.1.71          PPP Comp 141    Compressed data
+    236 14.816222771   142.250.200.142       172.29.0.19           ICMP     100    Echo (ping) reply    id=0x0001, seq=5/1280, ttl=114 (request in 233)
+    237 14.816222771   142.250.200.142       172.29.0.19           ICMP     100    Echo (ping) reply    id=0x0001, seq=5/1280, ttl=114
+    238 15.316871773   192.168.1.71          193.136.28.199        GRE      46     Encapsulated PPP
+    239 15.377955266   2001:818:df62:d400:c145:fb45:6ec5:e34e 2600:1901:1:e52::     TLSv1.2  129    Application Data
+    240 15.316871773   192.168.1.71          193.136.28.199        GRE      48     Encapsulated PPP
+    241 15.377955266   2001:818:df62:d400:c145:fb45:6ec5:e34e 2600:1901:1:e52::     TCP      131    [TCP Retransmission] 52558 → 443 [PSH, ACK] Seq=1 Ack=1 Win=501 Len=43 TSval=3801300140 TSecr=4065051391
+    242 15.401573641   2600:1901:1:e52::     2001:818:df62:d400:c145:fb45:6ec5:e34e TCP      88     443 → 52558 [ACK] Seq=1 Ack=44 Win=272 Len=0 TSval=4065081373 TSecr=3801300140
+    243 15.416952664   2600:1901:1:e52::     2001:818:df62:d400:c145:fb45:6ec5:e34e TLSv1.2  128    Application Data
+    244 15.401573641   2600:1901:1:e52::     2001:818:df62:d400:c145:fb45:6ec5:e34e TCP      86     443 → 52558 [ACK] Seq=1 Ack=44 Win=272 Len=0 TSval=4065081373 TSecr=3801300140
+    245 15.416986150   2001:818:df62:d400:c145:fb45:6ec5:e34e 2600:1901:1:e52::     TCP      88     52558 → 443 [ACK] Seq=44 Ack=41 Win=501 Len=0 TSval=3801300179 TSecr=4065081389
+    246 15.416952664   2600:1901:1:e52::     2001:818:df62:d400:c145:fb45:6ec5:e34e TLSv1.2  126    [TCP Spurious Retransmission] , Application Data
+    247 15.416986150   2001:818:df62:d400:c145:fb45:6ec5:e34e 2600:1901:1:e52::     TCP      86     [TCP Dup ACK 245#1] 52558 → 443 [ACK] Seq=44 Ack=41 Win=501 Len=0 TSval=3801300179 TSecr=4065081389
+    248 15.788515740   172.29.0.19           142.250.200.142       ICMP     100    Echo (ping) request  id=0x0001, seq=6/1536, ttl=64 (reply in 249)
+    249 15.816189191   142.250.200.142       172.29.0.19           ICMP     100    Echo (ping) reply    id=0x0001, seq=6/1536, ttl=114 (request in 248)
+    250 15.684953299   2a02:26f0:7900:184::b33 2001:818:df62:d400:c145:fb45:6ec5:e34e TLSv1.2  112    Application Data
+    251 15.684953299   2a02:26f0:7900:184::b33 2001:818:df62:d400:c145:fb45:6ec5:e34e TCP      110    [TCP Retransmission] 443 → 45490 [PSH, ACK] Seq=1 Ack=1 Win=501 Len=24 TSval=1752196727 TSecr=917274941
+    252 15.684953714   2a02:26f0:7900:184::b33 2001:818:df62:d400:c145:fb45:6ec5:e34e TCP      88     443 → 45490 [FIN, ACK] Seq=25 Ack=1 Win=501 Len=0 TSval=1752196727 TSecr=917274941
+    253 15.684953714   2a02:26f0:7900:184::b33 2001:818:df62:d400:c145:fb45:6ec5:e34e TCP      86     [TCP Out-Of-Order] 443 → 45490 [FIN, ACK] Seq=25 Ack=1 Win=501 Len=0 TSval=1752196727 TSecr=917274941
+    254 15.685029024   2001:818:df62:d400:c145:fb45:6ec5:e34e 2a02:26f0:7900:184::b33 TCP      88     45490 → 443 [ACK] Seq=1 Ack=25 Win=501 Len=0 TSval=917295054 TSecr=1752196727
+    255 15.685029024   2001:818:df62:d400:c145:fb45:6ec5:e34e 2a02:26f0:7900:184::b33 TCP      86     [TCP Dup ACK 254#1] 45490 → 443 [ACK] Seq=1 Ack=25 Win=501 Len=0 TSval=917295054 TSecr=1752196727
+    256 15.685278010   2a02:26f0:7900:184::b33 2001:818:df62:d400:c145:fb45:6ec5:e34e TCP      88     [TCP Out-Of-Order] 443 → 45490 [FIN, ACK] Seq=25 Ack=1 Win=501 Len=0 TSval=1752196757 TSecr=917274941
+    257 15.685278010   2a02:26f0:7900:184::b33 2001:818:df62:d400:c145:fb45:6ec5:e34e TCP      86     [TCP Out-Of-Order] 443 → 45490 [FIN, ACK] Seq=25 Ack=1 Win=501 Len=0 TSval=1752196757 TSecr=917274941
+    258 15.685311546   2001:818:df62:d400:c145:fb45:6ec5:e34e 2a02:26f0:7900:184::b33 TCP      100    45490 → 443 [ACK] Seq=1 Ack=26 Win=501 Len=0 TSval=917295055 TSecr=1752196757 SLE=25 SRE=26
+    259 15.685311546   2001:818:df62:d400:c145:fb45:6ec5:e34e 2a02:26f0:7900:184::b33 TCP      98     [TCP Dup ACK 258#1] 45490 → 443 [ACK] Seq=1 Ack=26 Win=501 Len=0 TSval=917295055 TSecr=1752196757 SLE=25 SRE=26
+    260 15.685452672   2001:818:df62:d400:c145:fb45:6ec5:e34e 2a02:26f0:7900:184::b33 TLSv1.2  127    Application Data
+    261 15.686036997   2001:818:df62:d400:c145:fb45:6ec5:e34e 2a02:26f0:7900:184::b33 TLSv1.2  112    Application Data
+    262 15.686095640   2001:818:df62:d400:c145:fb45:6ec5:e34e 2a02:26f0:7900:184::b33 TCP      88     45490 → 443 [FIN, ACK] Seq=64 Ack=26 Win=501 Len=0 TSval=917295056 TSecr=1752196757
+    263 15.695471694   2a02:26f0:7900:184::b33 2001:818:df62:d400:c145:fb45:6ec5:e34e TCP      76     443 → 45490 [RST] Seq=26 Win=0 Len=0
+    264 15.695472121   2a02:26f0:7900:184::b33 2001:818:df62:d400:c145:fb45:6ec5:e34e TCP      76     443 → 45490 [RST] Seq=26 Win=0 Len=0
+    265 15.703377525   2a02:26f0:7900:184::b33 2001:818:df62:d400:c145:fb45:6ec5:e34e TCP      76     443 → 45490 [RST] Seq=26 Win=0 Len=0
+    266 15.788515740   172.29.0.19           142.250.200.142       ICMP     100    Echo (ping) request  id=0x0001, seq=6/1536, ttl=64 (reply in 272)
+    267 15.685452672   2001:818:df62:d400:c145:fb45:6ec5:e34e 2a02:26f0:7900:184::b33 TCP      125    [TCP Retransmission] 45490 → 443 [PSH, ACK] Seq=1 Ack=26 Win=501 Len=39 TSval=917295055 TSecr=1752196757
+    268 15.788812433   192.168.1.71          193.136.28.199        PPP Comp 137    Compressed data
+    269 15.686036997   2001:818:df62:d400:c145:fb45:6ec5:e34e 2a02:26f0:7900:184::b33 TCP      110    [TCP Retransmission] 45490 → 443 [PSH, ACK] Seq=40 Ack=26 Win=501 Len=24 TSval=917295055 TSecr=1752196757
+    270 15.815939711   193.136.28.199        192.168.1.71          PPP Comp 141    Compressed data
+    271 15.686095640   2001:818:df62:d400:c145:fb45:6ec5:e34e 2a02:26f0:7900:184::b33 TCP      86     [TCP Out-Of-Order] 45490 → 443 [FIN, ACK] Seq=64 Ack=26 Win=501 Len=0 TSval=917295056 TSecr=1752196757
+    272 15.816189191   142.250.200.142       172.29.0.19           ICMP     100    Echo (ping) reply    id=0x0001, seq=6/1536, ttl=114 (request in 266)
+    273 15.695471694   2a02:26f0:7900:184::b33 2001:818:df62:d400:c145:fb45:6ec5:e34e TCP      74     443 → 45490 [RST] Seq=26 Win=0 Len=0
+    274 15.695472121   2a02:26f0:7900:184::b33 2001:818:df62:d400:c145:fb45:6ec5:e34e TCP      74     443 → 45490 [RST] Seq=26 Win=0 Len=0
+    275 15.703377525   2a02:26f0:7900:184::b33 2001:818:df62:d400:c145:fb45:6ec5:e34e TCP      74     443 → 45490 [RST] Seq=26 Win=0 Len=0
+    276 15.788812433   192.168.1.71          193.136.28.199        PPP Comp 135    Compressed data
+    277 15.815939711   193.136.28.199        192.168.1.71          PPP Comp 139    Compressed data
+    278 16.053878      controller            host                  HCI_EVT  37     Rcvd LE Meta (LE Advertising Report)
+    279 16.054875      controller            host                  HCI_EVT  30     Rcvd LE Meta (LE Advertising Report)
+    280 16.255019      host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    281 16.256925      controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    282 16.256988      host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    283 16.258965      controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    284 16.316765526   192.168.1.71          193.136.28.199        GRE      46     Encapsulated PPP
+    285 16.483085      host                  controller            HCI_CMD  6      Sent LE Set Scan Enable
+    286 16.485887      controller            host                  HCI_EVT  7      Rcvd Command Complete (LE Set Scan Enable)
+    287 16.486942      controller            host                  HCI_EVT  4      Rcvd Inquiry Complete
+    288 16.316765526   192.168.1.71          193.136.28.199        GRE      48     Encapsulated PPP
+    289 16.790755608   172.29.0.19           142.250.200.142       ICMP     100    Echo (ping) request  id=0x0001, seq=7/1792, ttl=64 (no response found!)
+    290 16.790755608   172.29.0.19           142.250.200.142       ICMP     100    Echo (ping) request  id=0x0001, seq=7/1792, ttl=64 (reply in 291)
+    291 16.820467185   142.250.200.142       172.29.0.19           ICMP     100    Echo (ping) reply    id=0x0001, seq=7/1792, ttl=114 (request in 290)
+    292 16.791073153   192.168.1.71          193.136.28.199        PPP Comp 135    Compressed data
+    293 16.820184498   193.136.28.199        192.168.1.71          PPP Comp 139    Compressed data
+    294 16.791073153   192.168.1.71          193.136.28.199        PPP Comp 137    Compressed data
+    295 16.820184498   193.136.28.199        192.168.1.71          PPP Comp 141    Compressed data
+    296 16.820467185   142.250.200.142       172.29.0.19           ICMP     100    Echo (ping) reply    id=0x0001, seq=7/1792, ttl=114
